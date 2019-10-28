@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>spotify login</title>
+		 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style type="text/css">
+  	.navbar {
+        min-height: 120px !important;
+    }
+    .btn
+    {
+    	min-height: 50px !important;
+    	min-width: 50px !important;
+    	border-radius: 5000px !important;
+    	font-size: 15px;
+    }
+   
+     .d-flex>div{
+     	display: inline;position: relative;
+     }
+     @media screen and (min-width: 576px) {
+ .btn{
+ 	width: 450px !important;
+ }
+}
+strong{color:#5cb85c; }
+.form-check-input
+{
+	height: 20px;width: 20px;background-color: green !important;color: white; 
+}
+     @media screen and (min-width: 576px) {
+     	#submit{
+     		max-width: 80px;display: inline; margin-left: 20px;
+     	}
+
+}
+.loginput{
+	margin-top: 5px;
+	min-height: 40px;
+	color: black !important;
+
+}
+.btn .btn-outline{border-width: 2px !important;}
+ @media screen and (min-width: 576px) {
+   .loginput{
+	margin-top: 5px;
+	min-width:450px; 
+
+}
+[placeholder]{color: #f7f7f7;font-weight: bold;opacity: 0.6;}
+.btn .btn-outline-dark:hover{background-color: rgb(79, 84, 77);color: white;}
+}
+#forgot:hover{opacity: 0.7;}
+
+.custom-control-label:before{background-color: white;
+}
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+    background-color:rgb(33, 148, 4);
+    border-color: rgb(59, 245, 12);
+
+} 
+</style>
+</head>
+<body>
+	<!-- Image and text -->
+<nav class="navbar navbar-light">
+  <a class="navbar-brand mx-auto " href="#">
+    <img src="spotify.png" width="60" height="60" class="d-inline-block align-top" alt="" style="border-radius: 50%;">
+    <b style="font-size: 40px;">Spotify</b>
+  </a>
+  <div style="height: 0.5px;background-color:rgb(192, 194, 196);width: 100%;"></div>
+</nav>
+<div class="container my-5 col-sm">
+	<div class=" d-flex justify-content-center ">
+<b style="font-weight: bolder;">To continue, log in to Spotify.</b>
+<br>
+</div>
+	<div class=" d-flex justify-content-center my-2  "><BR>
+		<button type="button" class="btn btn-success px-5"><b>LOG IN WITH PHONE NUMBER</b></button></div>
+	<div class=" d-flex justify-content-center my-4 "><BR>
+		<button type="button" class="btn btn-primary"><b>LOG IN WITH FACEBOOK</b></button>
+	</div>
+<div class=" d-flex justify-content-center">
+	 <div><b style="font-size: 0.6EM;">OR</b></div></div>
+	 <div class=" d-flex justify-content-center">
+	 <input type="text" name="" class="loginput" name="login" placeholder="Email address or username" autofocus="true"><br></div>
+	 <div class=" d-flex justify-content-center">
+
+	 <input type="password" autofocus="true" class="loginput" name="login" placeholder="password" style="margin-bottom: 5px;"><br>
+</div>
+<form style="margin-top: 5px;">
+	<div class=" d-flex justify-content-center">
+  <div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" style="height: 20px;width: 20px;">
+    <label class="custom-control-label" for="customCheck">Remember Me</label>
+  </div>
+ </div>
+ <div class=" d-flex justify-content-center my-4"><button type="button" class="btn btn-success">LOG IN</button>
+ </div>
+</form>
+ <div class=" d-flex justify-content-center "><p class="text-success" id="forgot">forgot your password?</p></div>
+ <div class=" d-flex justify-content-center">
+ 	<div style="height: 1px;width: 30%;background-color: grey;"></div>
+ </div>
+<div class=" d-flex justify-content-center my-4"><p class="text-dark"></p><b>Don't have an account?</b></div>
+ <div class=" d-flex justify-content-center my-4">
+<button type="button" class="btn btn-outline-dark"><b>
+SIGN UP FOR SPOTIFY</b></button></div>
+ <div class=" d-flex justify-content-center">
+ 	<div style="height: 1px;width: 30%;background-color: grey;"></div>
+ </div>
+  <div class=" d-flex justify-content-center my-2">
+
+ <p class=".text-secondary" 
+style="font-size: 12px;">If you click "Log in with Facebook" and are not a Spotify user, you will be registered<br> and you agree to Spotify's<strong> Terms and Conditions</strong> and<strong> Privacy Policy</strong></p>
+ </div>
+
+</body>
+</html>

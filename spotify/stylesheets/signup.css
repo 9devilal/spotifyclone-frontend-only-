@@ -1,0 +1,35 @@
+
+   	.btn
+    {
+    	min-height: 50px !important;
+    	min-width: 50px !important;
+    	border-radius: 5000px !important;
+    	font-size: 15px;
+    }
+    strong{color:#5cb85c !important; }
+    strong:hover{opacity: 0.7;}
+
+     @media screen and (min-width: 576px) 
+     {
+     	.btn
+    {
+    	min-height: 50px !important;
+    	min-width: 350px !important;
+    	border-radius: 5000px !important;
+    	font-size: 15px;
+
+   }
+   .loginput{
+	margin-top: 5px;
+	min-height: 40px;
+	min-width: 400px;
+	color: black !important;
+
+}
+}
+strong>a{text-decoration: none;
+color:#5cb85c;}
+strong>a:hover{text-decoration: none;
+color:#5cb85c;}
+.form-check-label{font-size: 12px;}
+[placeholder]{color: #f7f7f7;font-weight: bold;opacity: 0.6;padding-left: 3px;}

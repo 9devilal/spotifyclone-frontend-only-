@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>spotify signup</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	 	<script type="text/javascript" src="C:\Users\devilal\Documents\jquery.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   
+   <style type="text/css">
+   	.btn
+    {
+    	min-height: 50px !important;
+    	min-width: 50px !important;
+    	border-radius: 5000px !important;
+    	font-size: 15px;
+    }
+    strong{color:#5cb85c !important; }
+    strong:hover{opacity: 0.7;}
+
+     @media screen and (min-width: 576px) 
+     {
+     	.btn
+    {
+    	min-height: 50px !important;
+    	min-width: 350px !important;
+    	border-radius: 5000px !important;
+    	font-size: 15px;
+
+   }
+   .loginput{
+	margin-top: 5px;
+	min-height: 40px;
+	min-width: 400px;
+	color: black !important;
+
+}
+}
+strong>a{text-decoration: none;
+color:#5cb85c;}
+strong>a:hover{text-decoration: none;
+color:#5cb85c;}
+.form-check-label{font-size: 12px;}
+[placeholder]{color: #f7f7f7;font-weight: bold;opacity: 0.6;padding-left: 3px;}
+
+ </style>
+ <script type="text/javascript" >
+ 	function validateform(thisform)
+ 	{
+ 		var username= thisform.uname;
+        var email=thisform.mail.value;
+        var confirmail=thisform.cmail.value;
+        var password=thisform.password.value;
+        alert(password);
+        var d=new Date();
+        var year=thisform.year.value;
+        var currentyear=d.getFullYear();
+ 		//alert(currentyear)
+ 		if(username.value==null||username.value=="")
+ 		{   alert(username.value);
+ 			alert("this is a required field");
+ 			username.focus();
+ 			return false;
+ 		}
+
+
+ 		if(!(confirmail==email))
+ 		{
+ 			alert('your email id does not match');
+ 			confirmail.focus();
+ 			return false;
+ 		}
+ 		if(password==null||password=="")
+ 		{
+ 			alert('password cannot be left blank');
+ 			return false;
+ 		}
+        alert((currentyear-year)>=10);
+        if(!((currentyear-year)>=10))
+        {
+        	alert("you must be at least 9 years of age to have a spotify account");
+        	year.focus();
+        	return false;
+
+        }
+return false;
+    }
+ </script>
+</head>
+<body>
+	<nav class="navbar navbar-light">
+      <a class="navbar-brand mx-auto " href="#">
+         <img src="spotify.png" width="60" height="60" class="d-inline-block align-top" alt="" style="border-radius: 50%;">
+           <b style="font-size: 40px;">Spotify</b>
+        </a>
+    </nav>
+    <div style="height: 1px;background-color:grey;width: 100%;">
+    </div>
+    <div class="container-fluid my-5 col-sm">
+    	<div class=" d-flex justify-content-center ">
+    	<button type="button" class="btn btn-primary"><B>SIGN UP WITH FACEBOOK</B></button></div>
+    	<div class=" d-flex justify-content-center "><B>OR</B>
+    	</div>
+    	<div class=" d-flex justify-content-center "><b>Sign up with your email address</b>
+    	</div>
+    	<form action="" method="post" onsubmit="validateform(this);return false" >
+	 <div class=" d-flex justify-content-center my-3">
+	 <input type="email" name="mail" class="loginput"  placeholder="Email " autofocus="true"><br></div>
+	 <div class=" d-flex justify-content-center my-3">
+	 <input type="email" name="cmail" class="loginput"  placeholder="Confirm Email " autofocus="true"><br></div>
+
+      <div class=" d-flex justify-content-center my-3">
+	 <input type="text" name="uname" class="loginput" id="username" placeholder="What should we call you? " autofocus="true" autosave="true"><br></div>
+      <div class=" d-flex justify-content-center my-3">
+       <input type="password" autofocus="true" class="loginput" name="password" placeholder="password" style="margin-bottom: 5px;"><br>
+      </div>
+          	
+
+
+           <div class=" d-flex justify-content-center my-3" style="position: relative;">
+           	<label >Date of birth:</label><br>
+          	<input type="year" name="year" placeholder="2000" class="mx-2" style="max-width: 90px;height: 35px;">
+          	<div class="form-group">
+                <select class="form-control mx-2" id="sel1" placeholder="month" style="max-height: 80px;">
+                   <option>January</option>
+                   <option>February</option>
+                   <option>March</option>
+                   <option>April</option>
+                   <option>May</option>
+                   <option>June</option>
+                   <option>July</option>
+                   <option>August</option>
+                   <option>September</option>
+                   <option>October</option>
+                   <option>November</option>
+                   <option>Dcember</option>
+
+             </select>
+            </div><div class="mx-2">
+            <input type="number" min="1" max="31" name="day" placeholder="1" class="ml-2" style="max-width:50px;height: 35px;">
+        </div>
+    </div>
+       <div class=" d-flex justify-content-center my-3">
+       	
+    <label class="radio-inline mr-5">
+      <input type="radio" name="optradio" checked>Male
+    </label>
+    <label class="radio-inline mr-5">
+      <input type="radio" name="optradio">Female
+    </label>
+    <label class="radio-inline ">
+      <input type="radio" name="optradio">Non-binary
+    </label>
+  
+ </div>
+ <div class=" d-flex justify-content-center my-3">
+ 	<input type="checkbox">
+    <p class="text-secondary" style="font-size: 12px;">Share my registration data with Spotify's content providers<br>  for marketing purposes.</p>
+</div>
+ <div class=" d-flex justify-content-center my-3">
+ 	<p class="text-dark" style="font-size: 12px;">By clicking on Sign up, you agree to Spotify's<strong> Terms and Conditions of Use.</strong><br><br> 
+
+To learn more about how Spotify collects, uses, shares and protects your<br> personal data please read Spotify's<strong> Privacy Policy.</strong></p>
+</div>
+ <div class=" d-flex justify-content-center my-3">
+    <input type="submit" class="btn btn-success" value="SIGN UP"></input></div>
+	</form>
+</div>
+ <div class=" d-flex justify-content-center my-3">
+ 	<b>Already have an account ?</b><strong><a href="spotifylogin.html">LogIn</a></strong>
+</div>
+</body>
+</html>
